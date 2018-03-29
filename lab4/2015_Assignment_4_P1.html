@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="UTF-8" />
+<title>2015  Assignment 4 </title> 
+<script type="text/javascript">
+var myImages =['Unknown.jpg', 'Winter.jpg', 'Spring.jpg', 'Summer.jpg', 'Autumn.jpg']
+function myImage()
+{
+	//display Unknown.jpg if the user do not enter 1, 2, 3, or 4
+	//consider all possibilities
+	
+	var MW_x = parseInt(document.getElementById('user1').value);
+	var MW_image = "../images/Unknown.jpg";
+	if(MW_x == 1){ MW_image = "../images/Winter.jpg"}
+	else if(MW_x == 2){ MW_image = "../images/Spring.jpg"}
+	else if(MW_x == 3){ MW_image = "../images/Summer.jpg"}
+	else if(MW_x == 4){ MW_image = "../images/Autumn.jpg"}
+
+	document.getElementById('season').src = MW_image;
+
+}
+function addParagraphs()
+{
+
+// add paragraph 2 between paragraph 1 and 3
+//add paragraph 5 after paragraph 4; take care of the fact that  p4 is not the last child of div2
+//new paragraphs have background green
+//Should i disable it so that you cant add paragraphs more than once?
+
+	var MW_x = document.createElement("p");
+	MW_x.style.backgroundColor = "green";
+	var MW_t = document.createTextNode("THIS IS PARAGRAPH 2")
+	MW_x.appendChild(MW_t);
+
+	document.getElementById("div2").insertBefore(MW_x, document.getElementById("p3"));
+
+	var MW_y = document.createElement("p");
+	MW_y.style.backgroundColor = "green";
+	var MW_u = document.createTextNode("THIS IS PARAGRAPH 5")
+	MW_y.appendChild(MW_u);
+
+	document.getElementById("div2").insertBefore(MW_y, document.getElementById("b2"));
+
+}
+</script>
+</head>
+<body style="color:black; font-family: Arial; font-size:x-large;">
+<div id= "div1" style ="font-family: Algerian; font-size:xx-large; width:40%;">
+<table id="t1" style= "border:3px solid green; border-spacing:5px; background-color:yellow;">
+<tr>
+<td>This is your choice of season:</td>
+<td>
+<img id="season" src="../images/Unknown.jpg" alt="season"></td></tr>
+</table>
+<p style= "font-size: 20px; color: green; background-color:yellow;">for winter enter 1<br />for spring enter 2<br /> for summer enter 3 <br />for autumn enter 4.<br />
+<input type='text' id='user1' value='Enter 1, 2, 3, or 4' /> 
+<input type='button' onclick='myImage()' value='Choose the season'/><p>
+</div>
+<hr style="width:40%; height:5px; background-color: green; text-align: left;" />
+<div id="div2" style ="font-family: Algerian; font-size:large; width:40%;">
+<p id ="p1" > This is paragraph 1</p>
+<p id ="p3" > This is paragraph 3</p>
+<p id ="p4" > This is paragraph 4</p>
+<input id="b2" type='button' onclick='addParagraphs()' value='Add P2 and P5'/>
+</div>
+
+</body>
+</html>
+

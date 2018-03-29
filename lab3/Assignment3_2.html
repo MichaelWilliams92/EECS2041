@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html id = "html" name = "MW_html" lang = "en">
+<head id = "head" name = "MWhead">
+<meta id = "meta" name = "MW_meta" charset="UTF-8" />
+<title id = "title" name = "MW_title">Assignment 3_2_Michael Williams</title> 
+<style id = "styler" name = "MW_styler" type="text/css">
+
+html{	border:2px dotted #000000;
+	width:95%;
+	margin:10;
+	padding:5;
+	font-family:Arial
+    }
+
+table{	border:5px solid #006400;
+	background:#c0c0c0;
+	width:90%;
+	vertical-align:middle;
+	padding:10px;
+	spacing:10px
+      }
+
+th{	text-align:center;
+	font-weight:bold;
+	font-size:200%;
+	width:33%;
+	background:#8fbc8f;
+	padding:10px;
+	border:5px solid #c0c0c0
+      }
+
+td{	font-weight:bold;
+	width:33%;
+	background:#8fbc8f;
+	padding:20px;
+	border:5px solid #c0c0c0
+      }
+</style>
+
+</head>
+
+<body id = "body" name = "MW_body">
+
+<table id = "form" name = "MW_form">
+	<tr id = "row1" name = "MW_row1">
+		<th colspan = 3 id = "headerCell" name = "MW_headerCell">STUDENT REGISTRATION FORM</th>
+	</tr>
+
+	<tr id = "row2" name = "MW_row2">
+		<td id = "cell2_1" name = "MW_cell2_1" style = "text-align:left">STUDENT ID:<br id = "br1" name = "MW_br1"/><input type = "text" id = "Student_ID" name = "MW_Student_ID" style = "background:#c0c0c0" size="20"></input></td>
+		<td id = "cell2_2" name = "MW_cell2_2" style = "text-align:center">ADDRESS</td>
+		<td id = "cell2_3" name = "MW_cell2_3" style = "text-align:center">COURSES</td>
+	</tr>
+
+	<tr id = "row3" name = "MW_row3">
+		<td id= "cell3_1" name = "MW_cell3_1" style = "text-align:left">STUDENT FAMILY NAME:<br id = "br2" name = "MW_br2" /><input type = "text" id = "Student_FN" name = "MW_Student_FN" style = "background:#c0c0c0" size = "30"></input></td>
+		<td id = "cell3_2" name = "MW_cell3_2" rowspan = 2 style = "text-align:left">Street:<br id = "br3" name = "MW_br3"/><textarea id = "Street" name = "MW_Street" rows = "4" cols = "30" style = "background:#c0c0c0" size = "30"></textarea><br id = "br4" name = "MW_br4" />
+		
+			<br id = "br5" name = "MW_br5" />City:<br id = "br6" name = "MW_br6" /><select id = "City" name = "MW_City" style = "width:80%; background:#c0c0c0; font-weight:bold">
+				<option id = "City1" name = "MW_City1">Mississauga</option>
+				<option id = "City2" name = "MW_City2" selected="selected">Toronto</option>
+				<option id = "City3" name = "MW_City3">Montreal</option>
+				<option id = "City4" name = "MW_City4">Quebec</option>
+				<option id = "City5" name = "MW_City5">London</option>
+				<option id = "City6" name = "MW_City6">Hamilton</option>
+				<option id = "City7" name = "MW_City7">Sudbury</option>
+				<option id = "City8" name = "MW_City8">Windsor</option>
+				<option id = "City9" name = "MW_City9">Other</option></select> 
+			<br id = "br7" name = "MW_br7"/><br id = "br8" name = "MW_br8" />Province/Territory:<select id = "Prov" name = "MW_Prov" style = "width:80%; background:#c0c0c0; font-weight:bold">
+				<option id = "prov1" name = "MW_prov1">QUEBEC</option>
+				<option id = "prov2" name = "MW_prov2" selected="selected">ONTARIO</option>
+				<option id = "prov3" name = "MW_prov3">NEW BRUNSWICK</option>
+				<option id = "prov4" name = "MW_prov4">MANITOBA</option>
+				<option id = "prov5" name = "MW_prov5">NOVA SCOTIA</option>
+				<option id = "prov6" name = "MW_prov6">ALBERTA</option>
+				<option id = "prov7" name = "MW_prov7">OTHER</option></select>
+		 </td>
+
+		<td id = "cell3_3" name = "MW_cell3_3" style = "text-align:left">SEMESTER:<br id = "br9" name = "MW_br9" />
+
+			<input type="radio" value="WINTER" name="xbrowser" id = "Semester_Winter" />WINTER
+			<br id = "br10" name = "MW_br10"/><input type="radio" value="FALL" name="xbrowser" id = "Semester_Fall" />FALL
+			<br id = "br11" name = "MW_br11"/><input type="radio" value="SUMMER" name="xbrowser" id = "Semester_Summer"/>SUMMER				
+		</td>
+
+	</tr>
+
+	<tr id = "row4" name = "MW_row4">
+
+		<td id = "Student_Gn" name = "MW_Student_GN" style = "text-align:left">STUDENT GIVEN NAME:<br id = "br12" name = "MW_br12" /><input type = "text" style = "background:#c0c0c0" size = "30"></input></td>
+		<td style = "text-align:left">SELECT ONE or MANY<br id = "br13" name = "MW_br13" />COURSES to ENROLL:<br id = "br14" name = "MW_br14"/> 
+			<select id = "Courses" name = "MW_Courses" style = "width:80%; background:#c0c0c0; font-weight:bold" multiple="multiple" size="5">
+			<option id = "2041" name = "MW_2041">EECS2041</option>
+			<option id = "2042" name = "MW_2042">EECS2042</option>
+			<option id = "2043" name = "MW_2043" selected="selected">EECS2043</option>
+			<option id = "2044" name = "MW_2044">EECS2044</option>
+			<option id = "2045" name = "MW_2045">EECS2045</option>
+			<option id = "2046" name = "MW_2046">EECS2046</option>
+			<option id = "2047" name = "MW_2047">EECS2047</option></select></td>
+
+	</tr>
+</table>
+
+<p id = "paragraph" name = "MW_paragraph" style = "font-weight: bold">To see your choices:&nbsp;<input type="button" id = "Button" name = "MW_Button" value = "Click me!"></input></p>
+
+</body>
+</html>

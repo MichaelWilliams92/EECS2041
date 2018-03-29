@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+	<meta char="UTF-8">
+	<title>Assignment 5 Problem 2</title> 
+
+<script type="text/Javascript">
+
+function reset(){
+
+document.getElementById("MW_first_name").value = "";
+document.getElementById("MW_last_name").value = "";
+document.getElementById("MW_capital").value = "";
+document.getElementById("MW_rate").value = "";
+document.getElementById("MW_years").value = "";
+
+}//reset function, to clear all info from all text boxes
+
+</script>
+
+</head>
+
+<body>
+	<p style="text-align:right; margin-top:30px; margin-right:200px; margin-bottom:30px;">CAPITAL CALCULATOR</p><hr />
+
+	<FORM action="MW_capital.cgi" method="GET">
+
+<!--	<section style="width:50%; background-color:yellow; border: solid black;">
+		Your first name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" id="MW_first_name" name="MW_first_name" ><br />
+		Your last name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" id="MW_last_name" name="MW_last_name" ><br />
+		Initial capital: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" id="MW_capital" name="MW_capital" ><br />
+		Interest rate:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" id="MW_rate" name="MW_rate" ><br />
+		I like to know my capital after: <input type="text" id="MW_years" name="MW_years" >years <br />
+	</section>
+
+-->
+
+
+
+	<table style="width:50%; background-color:yellow; border:solid black;">
+
+		<tr>
+		<td>	
+			Your first name:			
+		</td>	
+		<td>
+			<input type="text" id="MW_first_name" name="MW_first_name" >
+		</tr>
+		<tr>
+		<td>
+			Your last name:
+		</td>
+		<td>
+			<input type="text" id="MW_last_name" name="MW_last_name" >
+		</td>
+		</tr>
+		<tr>
+		<td>
+			Initial capital:
+		</td>
+		<td>
+			<input type="text" id="MW_capital" name="MW_capital" >
+		</td>
+		</tr>
+		<tr>
+		<td>
+			Interest rate:
+		</td>
+		<td>
+			<input type="text" id="MW_rate" name="MW_rate" >
+		</td>
+		</tr>
+		<tr>
+		<td>
+			I'd like to know my capital after:
+		</td>
+		<td>
+			<input type="text" id="MW_years" name="MW_years" >
+		</td>
+		<td>
+			years
+		</td>
+		</tr>
+
+		
+
+	</table> 
+
+	<p>
+	<input type="submit" value="SUBMIT" style="background-color:#E6E6FA;"><br />
+	<input type="button" value="reset" style="background-color:#E6E6FA;" onclick="reset()">
+	</p>
+
+	</FORM>
+</body>
+
+</html>

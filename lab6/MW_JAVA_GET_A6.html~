@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="UTF-8" />
+<title>Assignment 6 from Java!</title> 
+</head>
+<body style="font-family:arial;font-weight:bold; background-color:green;">
+
+<FORM action="MWDisplayArtists.cgi" method="GET">
+<p>
+ArtistID: <input type="text" name="aID" id="aID">
+</p>
+<input type="submit" value="Submit">
+</FORM>
+
+</body>
+</html>
+

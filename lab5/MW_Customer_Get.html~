@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+	<meta char="UTF-8">
+	<title>Assignment 5 Problem 1</title> 
+
+<script type="text/Javascript">
+
+function checkID(MW_x){
+
+var MW_y = /^[1-9a-z]{5}$/.test(MW_x);
+if (MW_y == false){alert("ID format is incorrect. ID must be 5 characters long, comprised of lowercase letters and numbers 1 to 9");}
+
+}//checkID
+
+function checkPassword(MW_x){
+
+var MW_y = /^[1-9a-z]{6}$/.test(MW_x);
+if (MW_y == false){alert("Password format is incorrect. Password must be 6 characters long, comprised of lowercase letters and numbers 1 to 9");}
+
+}//check Password
+
+function checkRepeat(){
+MW_x = document.getElementById("MW_password_new").value;
+MW_y = document.getElementById("MW_repeat_password_new").value;
+
+if(MW_x != MW_y){alert("Passwords do not match!");}
+
+}//checkRepeat
+
+function signIn(){
+
+var MW_validator = document.getElementById("MW_repeat_password_new").value;
+
+if(MW_validator == ""){
+
+var MW_x = /^[1-9a-z]{6}$/.test(document.getElementById("MW_password_old").value);
+var MW_y = /^[1-9a-z]{5}$/.test(document.getElementById("MW_cust_ID_old").value);
+
+if(!(MW_x) || !(MW_y)){alert("error in input data"); return false;}
+else{return true;}//Send info
+
+}//check if repeat password is empty.  If it is, then user must be using the SIGN IN part, so validate that section.
+
+
+
+else if(!(MW_validator == "")){
+
+var MW_x = /^[1-9a-z]{6}$/.test(document.getElementById("MW_password_new").value);
+var MW_y = /^[1-9a-z]{5}$/.test(document.getElementById("MW_cust_ID_new").value);
+var MW_a = document.getElementById("MW_repeat_password_new").value;
+var MW_b = document.getElementById("MW_password_new").value;
+
+if(!(MW_x) || !(MW_y) || MW_a != MW_b){alert("error in input data"); return false;}
+
+
+else{return true;}//Send info
+
+
+}//if repeat password is filled with something, Customer is using SIGN UP part, so validate that section.
+
+}//sign In
+
+function signUp(){
+
+var MW_x = /^[1-9a-z]{6}$/.test(document.getElementById("MW_password_new").value);
+var MW_y = /^[1-9a-z]{5}$/.test(document.getElementById("MW_cust_ID_new").value);
+var MW_a = document.getElementById("MW_repeat_password_new").value;
+var MW_b = document.getElementById("MW_password_new").value;
+
+if(!(MW_x) || !(MW_y) || MW_a != MW_b){alert("error in input data"); return false;}
+
+
+else{return true;}//Send info
+
+}//sign In
+
+</script>
+
+</head>
+
+<body>
+	
+	<h3 style="background-color:yellow; color:green;">WELCOME to OUR COMPANY!</h3>
+	<hr />
+
+	<p style="font-weight:bold;">SIGN IN</p>
+
+	<FORM action="MW_get.cgi" method="GET" onsubmit ="return signIn();">
+
+		Customer ID:<input type="text" id="MW_cust_ID_old" name="MW_cust_ID_old" style="background-color:yellow;" onblur="checkID(document.getElementById('MW_cust_ID_old').value)"><br />
+		Password: &nbsp;&nbsp;&nbsp;   <input type="password" id="MW_password_old" name="MW_password_old" style="background-color:yellow;" onblur="checkPassword(document.getElementById('MW_password_old').value)"><br />
+		<input type="submit" value="Submit" style="background-color:yellow;">
+
+	<hr />
+	
+	<p style="font-weight:bold;">NEW CUSTOMER? <br />CREATE an ACCOUNT</p>
+
+
+		Customer ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="MW_cust_ID_new" name="MW_cust_ID_new" style="background-color:#E6E6FA;" onblur="checkID(document.getElementById('MW_cust_ID_new').value)"><br />
+		Password: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <input type="password" id="MW_password_new" name="MW_password_new" style="background-color:#E6E6FA;" onblur="checkPassword(document.getElementById('MW_password_new').value)"><br />
+		Repeat password:&nbsp;<input type="password" id="MW_repeat_password_new" name="MW_repeat_password_new" style="background-color:#E6E6FA;" onblur="checkRepeat()"><br />
+		<input type="submit" value="Create new account" style="background-color:#E6E6FA;">
+
+	</FORM>
+
+	<hr />
+
+	
+
+</body>
+
+</html>

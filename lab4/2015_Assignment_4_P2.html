@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="UTF-8" />
+<title>Using DOM</title> 
+<script>
+function changeList()
+{
+
+var MW_e1Copy = document.getElementById("e1").cloneNode(true); //e1 copy
+var MW_e2Copy = document.getElementById("e2").cloneNode(true);//e2 copy
+var MW_temp1 = document.getElementById("e1");
+var MW_temp2 = document.getElementById("e2");
+
+document.getElementById("e2").parentNode.replaceChild(MW_e1Copy, MW_temp2);
+document.getElementById("e1").parentNode.replaceChild(MW_e2Copy, MW_temp1);
+
+document.getElementById("e2").setAttribute("id", "temp");
+document.getElementById("e1").setAttribute("id", "e2");
+document.getElementById("temp").setAttribute("id", "e1");
+
+
+}
+
+function count()
+{
+
+var MW_array = [];
+var MW_j = 0;
+var MW_a = 0;
+var MW_b = 0;
+var MW_list = document.getElementsByTagName("li");
+
+	for(var MW_i = 0; MW_i<MW_list.length; MW_i++){
+		MW_array[MW_j] = MW_list[MW_i];
+		MW_j++;
+
+	}//for loop creating array
+	
+for( var MW_i = 0; MW_i < MW_array.length; MW_i++){
+	if(MW_array[MW_i].innerHTML.search("a$") != -1){MW_a++;}
+	else if(MW_array[MW_i].innerHTML.search("b$") != -1){MW_b++;}
+	
+
+}//for loop for counter
+
+alert("#a = " + MW_a + ", #b = " + MW_b);
+
+}
+</script>
+</head>
+<body id= "bd" style="font-family:arial; color:black; font-size:normal; ">
+<div id="list" style="background-color:yellow; width:40%;">
+<h3>Lists</h3>
+<ul >
+<li >l<sub>1  </sub>    
+<ul id="e1">
+<li>l<sub>11</sub>-a</li>
+<li>l<sub>12</sub>-b</li>
+<li>l<sub>13</sub>-a</li>
+<li>l<sub>14</sub>-a</li>
+<li>l<sub>15</sub>-b</li>
+<li>l<sub>16</sub>-b</li>
+</ul></li>
+<li >l<sub>2  </sub>    
+<ul id="e2"> 
+<li>l<sub>21</sub>-b</li>
+<li>l<sub>22</sub>-a</li>
+<li>l<sub>23</sub>-a</li>
+<li>l<sub>24</sub>-b</li>
+</ul></li>
+</ul>
+</div>
+<br />
+<input type="button" onclick="changeList()" value="Change list elements                " /><br />
+<br />
+<input type="button" onclick="count()" value="Count a and b in  <li> elements" /><br />
+<br />
+</body>
+</html>
+
